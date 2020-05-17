@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+  <section [class.error]="!bookService.isValid(form.controls.title)">
+    <label for="title">* Title</label>
+    <input type="text" formControlName="title" id="title" minlength="1" required />
+  </section>
+  <section [class.error]="!bookService.isValid(form.controls.author)">
+    <label for="author">* Author</label>
+    <input type="text" formControlName="author" id="author" minlength="1" required />
+  </section>
+  <section>
+    <label for="description">Description</label>
+    <textarea formControlName="description" id="description"></textarea>
+  </section>
+  <section class="buttons">
+    <button [disabled]="!bookService.canSaveNew(books, form)" (click)="addBook(form)">Save New</button>
+    <button [disabled]="!bookService.canSave(books, form)" (click)="updateBook(form, book)">Save</button>
+    <button [disabled]="!bookService.canDelete()" (click)="removeBook(form, book)">Delete</button>
+  </section>
+</form>

@@ -1,0 +1,48 @@
+@import 'mixins';
+
+:host {
+  @include section;
+
+  > div {
+    padding: 0 15px;
+
+    > span {
+      @include align;
+
+      margin-bottom: 10px;
+    }
+  }
+
+  > ul {
+    height: 315px;
+    vertical-align: top;
+    overflow: auto;
+
+    @include border;
+
+    > li {
+      &.active {
+        > a {
+          cursor: default;
+          pointer-events: none;
+
+          @include active;
+        }
+      }
+
+      > a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+
+        &:hover {
+          @include active;
+        }
+
+        > span {
+          @include align;
+        }
+      }
+    }
+  }
+}

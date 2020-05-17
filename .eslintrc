@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "@jraisanen/eslint-config-typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "@typescript-eslint/no-unnecessary-condition": 0
+  }
+}

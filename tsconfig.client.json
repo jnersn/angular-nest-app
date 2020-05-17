@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  },
+  "exclude": ["api", "dist", "node_modules"]
+}

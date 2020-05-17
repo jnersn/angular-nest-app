@@ -1,0 +1,23 @@
+@import 'constants';
+
+@mixin active {
+  background-color: $selected-background-color;
+  color: $selected-color;
+}
+
+@mixin align {
+  display: inline-block;
+  width: 50%;
+}
+
+@mixin border {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+}
+
+@mixin section {
+  display: inline-block;
+  width: calc(50% - 30px);
+  margin: 15px;
+  vertical-align: top;
+}

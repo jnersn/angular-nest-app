@@ -1,0 +1,12 @@
+<div>
+  <span>Title</span>
+  <span>Author</span>
+</div>
+<ul>
+  <li *ngFor="let item of items" [class.active]="selectedItem?.id === item.id">
+    <a [routerLink]="'/books/' + item.id">
+      <span>{{item.title}}</span>
+      <span>{{item.author}}</span>
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,12 @@
+<ng-template #view let-book="book" let-books="books" let-form="form">
+  <app-form [book]="book" [books]="books" [form]="form"></app-form>
+  <app-list [items]="books" [selectedItem]="book"></app-list>
+</ng-template>
+
+<ng-container
+  *ngTemplateOutlet="view; context: {
+    book: bookStore.book$ | async,
+    books: bookStore.books$ | async,
+    form: bookStore.form$ | async
+  }"
+></ng-container>
